@@ -6,19 +6,19 @@
   
   <select id="getCategory" parameterType="string" resultType="domain.Category">
     SELECT
-      catid AS categoryId,
-      name,
-      descn AS description
-    FROM category
-    WHERE catid = #{categoryId}
+      "catid" AS categoryId,
+      "name",
+      "descn" AS description
+    FROM "category"
+    WHERE "catid" = #{categoryId}
   </select>
 
   <select id="getCategoryList" resultType="domain.Category">
     SELECT
-      catid AS categoryId,
-      name,
-      descn AS description
-    FROM category
+      "catid" AS categoryId,
+      "name",
+      "descn" AS description
+    FROM "category"
   </select>
 
 </mapper>

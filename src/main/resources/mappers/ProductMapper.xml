@@ -7,32 +7,32 @@
 
   <select id="getProduct" parameterType="string" resultType="domain.Product">
     SELECT
-      productid,
-      name,
-      descn as description,
-      category as categoryId
-    FROM product
-    WHERE productid = #{productId}
+      "productid",
+      "name",
+      "descn" as description,
+      "category" as categoryId
+    FROM "product"
+    WHERE "productid" = #{productId}
   </select>
 
   <select id="getProductListByCategory" parameterType="string" resultType="domain.Product">
     SELECT
-      productid,
-      name,
-      descn as description,
-      category as categoryId
-    FROM product
-    WHERE category = #{value}
+      "productid",
+      "name",
+      "descn" as description,
+      "category" as categoryId
+    FROM "product"
+    WHERE "category" = #{value}
   </select>
 
   <select id="searchProductList" parameterType="string" resultType="domain.Product">
     select
-      productid,
-      name,
-      descn as description,
-      category as categoryId
-    from product
-    where lower(name) like #{value}
+      "productid",
+      "name",
+      "descn" as description,
+      "category" as categoryId
+    from "product"
+    where lower("name") like #{value}
   </select>
 
 </mapper>

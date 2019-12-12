@@ -5,15 +5,15 @@
 <mapper namespace="dao.SequenceDAO">
 
   <select id="getSequence" parameterType="domain.Sequence" resultType="domain.Sequence">
-    select name, nextid
-    from sequence
-    where name = #{name}
+    select "name", "nextid"
+    from "sequence"
+    where "name" = #{name}
   </select>
 
   <update id="updateSequence" parameterType="domain.Sequence">
-    update sequence
-    set nextid = #{nextId}
-    where name = #{name}
+    update "sequence"
+    set "nextid" = #{nextId}
+    where "name" = #{name}
   </update>
 
 </mapper>
